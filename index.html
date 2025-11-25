@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naghsh-e-Farsh AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              rug: {
+                red: '#8B0000',
+                darkRed: '#570000',
+                gold: '#D4AF37',
+                cream: '#F5F5DC',
+                navy: '#000080',
+                teal: '#008080'
+              }
+            },
+            fontFamily: {
+              sans: ['Vazirmatn', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Vazirmatn', sans-serif;
+        background-color: #fdfbf7;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+      .rug-border {
+        border: 8px solid #570000;
+        outline: 2px solid #D4AF37;
+        outline-offset: -4px;
+        position: relative;
+      }
+      .rug-border::after {
+        content: '';
+        position: absolute;
+        top: -6px; left: -6px; right: -6px; bottom: -6px;
+        border: 1px dashed #D4AF37;
+        pointer-events: none;
+      }
+      @media print {
+        .no-print { display: none !important; }
+        .print-only { display: block !important; }
+        body { background: white; }
+        .rug-container { box-shadow: none; border: none; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "html2canvas": "https://aistudiocdn.com/html2canvas@^1.4.1",
+    "jspdf": "https://aistudiocdn.com/jspdf@^3.0.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
